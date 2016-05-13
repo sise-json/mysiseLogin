@@ -5,7 +5,7 @@
 [![](https://img.shields.io/github/forks/coderyi/mysiseLogin.svg)](https://github.com/cncoder/mysiseLogin/network) 
 [![Facebook](https://img.shields.io/badge/facebook-@romennt-green.svg?style=flat)](https://www.facebook.com/romennt)
 
-![mysiseLogin](http://www.yicodes.com/wp-content/uploads/2016/05/sample.jpg) 
+![mysiseLogin](http://www.yicodes.com/wp-content/uploads/2016/05/simple.png) 
  * 模拟登录广州大学华软软件学院学生信息管理系统页面
  * 并实现 个人信息、课表、考试信息解析
 
