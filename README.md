@@ -1,9 +1,9 @@
 # mysiseLogin
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/cncoder/mysiseLogin/master/LICENSE.txt) 
-[![](https://img.shields.io/github/release/coderyi/Monkey.svg)](https://github.com/cncoder/mysiseLogin/releases)
-[![](https://img.shields.io/github/stars/coderyi/Monkey.svg)](https://github.com/cncoder/mysiseLogin/stargazers) 
-[![](https://img.shields.io/github/forks/coderyi/Monkey.svg)](https://github.com/cncoder/mysiseLogin/network) 
-[![Facebook](https://img.shields.io/badge/twitter-@coderyi9-green.svg?style=flat)](https://www.facebook.com/romennt)
+[![](https://img.shields.io/github/release/coderyi/mysiseLogin.svg)](https://github.com/cncoder/mysiseLogin/releases)
+[![](https://img.shields.io/github/stars/coderyi/mysiseLogin.svg)](https://github.com/cncoder/mysiseLogin/stargazers) 
+[![](https://img.shields.io/github/forks/coderyi/mysiseLogin.svg)](https://github.com/cncoder/mysiseLogin/network) 
+[![Facebook](https://img.shields.io/badge/facebook-@romennt-green.svg?style=flat)](https://www.facebook.com/romennt)
 
 ![mysiseLogin](http://www.yicodes.com/) 
  * 模拟登录广州大学华软软件学院学生信息管理系统页面
