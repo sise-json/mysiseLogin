@@ -17,42 +17,40 @@
  * 请在此类写入你的账号密码
  * ![mysiseLogin](http://www.yicodes.com/wp-content/uploads/2016/05/main.png)
 
- #login.java
+#login.java
  获取登录相关参数
  关键类
- 
 
- #class getcontent
+
+#class getcontent
  * 根据链接以及cookie获取相关内容
  * 每个函数都需要在login获得解析地址
  * 课程表放到二维数组中
  * 这样就可以达到跨平台处理了
- 
 
- #public class getline
+
+#public class getline
  * 专门用于解析main.jsp 链接
  * 例如个人信息、课程表之类的
  * 因为每个链接对应都不一样，为了灵活一点独自处理
 
- #使用方法：
- *以下都是静态变量，可以全局使用，前提是执行主函数中的 login.getloginvalue("输入你的学号","登陆密码")
+#使用方法:
+* 以下都是静态变量，可以全局使用，前提是执行主函数中的 login.getloginvalue("输入你的学号","登陆密码")
 
-     学生信息map
-		*static Map<String,String> infoMap = new HashMap<String,String>();
+##学生信息map
+* static Map<String,String> infoMap = new HashMap<String,String>();
 
-     学生信息map
-		*static Map<String,String> scoreMap = new HashMap<String,String>();
+##学生成绩map
+* static Map<String,String> scoreMap = new HashMap<String,String>();
 
-     学生课表
-		 *定义九行六列数组
-		 *如 clasStrings[1][2]表示星期二第一节
-		 *而clasStrings[0][2] 表示星期二字符串
-     		 *null或者值为-1证明该时段没有课程
-		 *static String [][] clasStrings = new String [9][8];
-
-
-     考试安排表
-     		*null证明没有考试，或者超出索引范围
-		*如 examStrings[0][x]表示表头
-     		*而examStrings[1][?] 表示第一门课程
-		*static String [][] examStrings = new String [10][8];
+##学生课表
+* 定义九行六列数组
+* 如 clasStrings[1][2]表示星期二第一节
+* 而clasStrings[0][2] 表示星期二字符串
+* null或者值为-1证明该时段没有课程
+* static String [][] clasStrings = new String [9][8];
+##考试安排表
+* null证明没有考试，或者超出索引范围
+* 如 examStrings[0][x]表示表头
+* 而examStrings[1][?] 表示第一门课程
+* static String [][] examStrings = new String [10][8];
