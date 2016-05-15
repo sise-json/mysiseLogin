@@ -5,10 +5,14 @@ import java.util.regex.Pattern;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-/*
- * 专门用于解析main.jsp 链接
- * 例如个人信息、课程表之类的
- * 因为每个链接对应都不一样，为了灵活一点独自处理
+/**
+ *  Class Name: getline.java
+ *  Description: 专门用于解析main.jsp 链接
+ *  例如个人信息、课程表之类的
+ *  因为每个链接对应都不一样，为了灵活一点独自处理
+ *  @author Abel TSE  DateTime 2016年5月15日 下午10:05:17 
+ *  @email romennts@gmail.com 
+ *  @version 1.0
  */
 public class getline {
 	//

@@ -11,13 +11,17 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-/*
- * 根据链接以及cookie获取相关内容
- * 输出相关的ＪＳＯＮ信息
+/**
+ *  Class Name: getcontent.java
+ *  Description:根据链接以及cookie获取相关内容 
  * 每个函数都需要在login获得解析地址
  * 基本做到把每个网页元素装载到map中，然后转换成JSON
- * 课程表放到二维数组中
+ * 课程表存放到二维数组中
+ * 考试安排表存放到二维数组中
  * 这样就可以达到跨平台处理了
+ *  @author Abel TSE  DateTime 2016年5月15日 下午10:03:46 
+ *  @email romennts@gmail.com 
+ *  @version 1.0
  */
 public class getcontent {
 	
@@ -26,8 +30,25 @@ public class getcontent {
 		//学生成绩map
 		static Map<String,String> scoreMap = new HashMap<String,String>();
 		
+		/*
+		 * 定义九行六列数组
+		 * 如 clasStrings[1][2]表示星期二第一节
+		 * 而clasStrings[0][2] 表示星期二字符串
+		 */
+		static String [][] clasStrings = new String [9][8]; 
+		
+		
+		/*考试安排表
+		 * 定义十行8列数组
+		 * 如 examStrings[0][x]表示表头
+		 * 而examStrings[1][?] 表示第一门课程
+		 * 
+		 */
+		
+		static String [][] examStrings = new String [10][8]; 
+		
 		//返回个人信息
-		public static String getinfo(String infolink){
+		public static void getinfo(String infolink){
 			//使用cookies保存的登录信息进行模拟登录获取信息系统主页
 			Document course_jsp=getpage(infolink);
 			//获取姓名学号等基本信息
@@ -42,7 +63,6 @@ public class getcontent {
 					      }
 					}
 			
-			return null;
 		};
 		
 		//返回学生成绩
@@ -76,13 +96,8 @@ public class getcontent {
 		
 				
 		//返回课程表（默认返回当前学期课表）
-		public static String getclass(String classlink){
-			/*
-			 * 定义九行六列数组
-			 * 如 clasStrings[1][2]表示星期二第一节
-			 * 而clasStrings[0][2] 表示星期二字符串
-			 */
-			String [][] clasStrings = new String [9][8]; 
+		public static void  getclass(String classlink){
+			
 			Document class_jsp=getpage(classlink);
 			Elements stuclass = class_jsp.select("body > form > table:nth-child(5) > tbody > tr:nth-child(1)");
 			//赋值星期 字符串到数组
@@ -105,44 +120,37 @@ public class getcontent {
 						}		
 					}		
 			}
-			 
-			return null;
+		
 		};
 		
 		//返回考试安排表
-		public static String getexam(String examlink){
-			/*
-			 * 定义十行8列数组
-			 *  
-			 *  
-			 */
-			System.out.println(examlink);
-			String [][] clasStrings = new String [10][8]; 
-			Document exam_jsp=getpage(examlink);
-			Elements stuexam = exam_jsp.select("#form1");
+		public static void getexam(String examlink){
 			
-			//赋值星期 字符串到数组
-			for (int i = 1; i <=7; i++) {
-				clasStrings[0][i]=stuexam.select("td").get(i).text();
+			Document exam_jsp=getpage(examlink);
+			
+			Elements stuexam = exam_jsp.select("#form1 > div > table.table");
+			 
+			//赋值备注信息（表头）到数组
+			for (int i = 0; i <=7; i++) {
+				examStrings[0][i]=stuexam.select("th").get(i).text();
 				
 			}
 			
+			stuexam=stuexam.select("tbody > tr");
+
 			//写入考试安排表
-			for (int i = 2; i <=9; i++) {
-				String selecString="body > form > table:nth-child(5) > tbody > tr:nth-child("+ i +")";
-				stuexam = exam_jsp.select(selecString);
-					for (int j = 0; j <stuexam.select("td").size(); j++) {
-						//严格判断表格内容是否存在意义，即该td是否存在真正的课程
-						if (!(stuexam.select("td").get(j).text().toString().length()==0||(stuexam.select("td").get(j).toString().indexOf("nbsp")>=0))) {
-							selecString="td:nth-child("+ (j+1) +")";
-							clasStrings[i-1][j]=stuexam.select(selecString).text();
+			for (int i = 1; i <=stuexam.size(); i++) {
+			
+					for (int j = 0; j <7; j++) {
+						
+						if (j==5) {
+							examStrings[i][j]=examStrings[i][j-1];
 						}else {
-							clasStrings[i-1][j]="-1";
+							examStrings[i][j]=stuexam.select("td").get(j).text().toString();
 						}		
 					}		
 			}
 			
-			return null;
 		};
 		
 		//获取每个分页面，并返回Document对象

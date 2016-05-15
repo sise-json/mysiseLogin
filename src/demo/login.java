@@ -18,7 +18,7 @@ import org.jsoup.select.Elements;
 public class login {
 	//为了方便各个函数之间调用cookies ,特意定义这个静态变量
 	static Map<String,String> cookies =null;
-	public static String getloginvalue() throws Exception {
+	public static String getloginvalue(String MySiseUsername,String MySisePassword) throws Exception {
 		//首先获取到学生信息管理系统页面
 		Connection con = Jsoup.connect("http://class.sise.com.cn:7001/sise/login.jsp");
 		con.header("User-Agent", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; MALC)");
@@ -38,12 +38,10 @@ public class login {
 		 String randomvalue=random.attr("value");
 		 
 		 //开始模拟登陆
-		 String username = "";
-			String password = "";
-			//map装载表单数据
+		 //map装载表单数据
 			Map<String,String> map = new HashMap<String,String>();
-			map.put("username", username);
-			map.put("password", password);
+			map.put("username", MySiseUsername);
+			map.put("password", MySisePassword);
 			map.put(hiddename, hiddenvalue);
 			map.put("random", randomvalue);
 			
@@ -84,9 +82,9 @@ public class login {
 			link.put("examlink", getline.getexamlink(main_jsp));
 			
 			//根据网站地图，获取解析后的JSON信息
-			//getcontent.getinfo(link.get("infolink").toString());
-			//getcontent.getscore(link.get("infolink").toString());
-			//getcontent.getclass(link.get("classlink").toString());
+			getcontent.getinfo(link.get("infolink").toString());
+			getcontent.getscore(link.get("infolink").toString());
+			getcontent.getclass(link.get("classlink").toString());
 			getcontent.getexam(link.get("examlink").toString());
 	
 			return "OK";
