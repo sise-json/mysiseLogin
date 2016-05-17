@@ -17,27 +17,26 @@ public class TestPrint {
 				    System.out.println(entry.getKey()+" : "+entry.getValue());
 				}
 			
-		System.out.println("学生成绩：");
-			for(Map.Entry<String, String> entry : getcontent.scoreMap.entrySet()){
-				    System.out.println(entry.getKey()+" : "+entry.getValue());
-				}
+		System.out.println("\n学生成绩：");
+		System.out.print("获得办公软件成绩：");
+		System.out.println(getcontent.scoreMap.get("办公软件"));
 			
-		System.out.println("学生课程表：");
-		for(String[] arr : getcontent.clasStrings){
-			for(String arr2 : arr){
-				if (arr2!=null) {
-					System.out.println(arr2+"\t");
-				}
-			}
-		}
+		System.out.println("\n学生课程表：");
+		//其实可以根据数组第一个索引知道判断第几节
+		System.out.print("星期三第二节课："+ "时间是："+ getcontent.clasStrings[2][0]);
+		System.out.println(" \t" + getcontent.clasStrings[2][3]);
+		System.out.print("星期二第一节课："+ "时间是："+ getcontent.clasStrings[1][0]);
+		System.out.println(" \t" + getcontent.clasStrings[1][2]);
+		System.out.print("星期五第一节课："+ "时间是："+ getcontent.clasStrings[1][0]);
+		System.out.println(" \t" + getcontent.clasStrings[1][5]);
 	        
-	   System.out.println("学生考试安排表：");
-	   for(String[] arr : getcontent.examStrings){
-			for(String arr2 : arr){
-				if (arr2!=null) {
-					System.out.println(arr2+"\t");
-				}
-			}
+	   System.out.println("\n学生考试安排表：");
+	   int i=0;
+	   //输出第一门考试内容
+	   for(String arr : getcontent.examStrings[1]){
+			System.out.print(getcontent.examStrings[0][i]+":  ");
+			System.out.println(arr);
+			i++;
 		}   
 	
 	}

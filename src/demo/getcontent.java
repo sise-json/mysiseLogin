@@ -137,17 +137,12 @@ public class getcontent {
 			}
 			
 			stuexam=stuexam.select("tbody > tr");
-
 			//п╢хК©╪йт╟╡ее╠М
 			for (int i = 1; i <=stuexam.size(); i++) {
 			
-					for (int j = 0; j <7; j++) {
-						
-						if (j==5) {
-							examStrings[i][j]=examStrings[i][j-1];
-						}else {
-							examStrings[i][j]=stuexam.select("td").get(j).text().toString();
-						}		
+					for (int j = 0; j <8; j++) {
+							examStrings[i][j]=stuexam.get(i-1).select("td").get(j).text().toString();
+								
 					}		
 			}
 			

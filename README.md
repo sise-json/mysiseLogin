@@ -15,7 +15,7 @@
  * 使用Jsoup解析mysise
  * 功能分布详情看各个类说明
  * 请在此类写入你的账号密码
- * ![mysiseLogin](http://www.yicodes.com/wp-content/uploads/2016/05/main.png)
+ ![mysiseLogin](http://www.yicodes.com/wp-content/uploads/2016/05/main.png)
  * 有错误提示(返回值在login.java中)
  ![mysiseLogin](http://www.yicodes.com/wp-content/uploads/2016/05/学号错误.png)
 
@@ -24,9 +24,9 @@
  关键类
  * 返回码说明：
  * 账号错误或者密码错误返回 error ，也可以根据需要修改
- * ![error](http://www.yicodes.com/wp-content/uploads/2016/05/返回的错误.png)
+  ![error](http://www.yicodes.com/wp-content/uploads/2016/05/返回的错误.png)
  * 账号成功登陆，返回 OK
- *  ![OK](http://www.yicodes.com/wp-content/uploads/2016/05/正确返回OK.png)
+  ![OK](http://www.yicodes.com/wp-content/uploads/2016/05/正确返回OK.png)
 
 #class getcontent
  * 根据链接以及cookie获取相关内容
@@ -62,5 +62,5 @@
 * static String [][] examStrings = new String [10][8];
 
 #测试类
-* 箭头是一一对应的，注意对于examStrings 和 clasStrings如果为 null 就是没有考试或者该时段不用上课
+* 箭头是一一对应的，注意对于examStrings 和 clasStrings如果为 null就是没有考试或者该时段不用上课
 *  ![打印输出某些结果](http://www.yicodes.com/wp-content/uploads/2016/05/test.png)

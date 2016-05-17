@@ -57,7 +57,7 @@ public class login {
 			//判断密码正确性
 			if(response.body().indexOf("index.jsp")<0){
 				System.out.println("账号不存在，或密码错误！");
-				return "账号不存在，或密码错误！";
+				return "error";
 			}
 			
 			//获取cookies
