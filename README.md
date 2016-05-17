@@ -15,9 +15,9 @@
  * 使用Jsoup解析mysise
  * 功能分布详情看各个类说明
  * 请在此类写入你的账号密码
- ![mysiseLogin](http://www.yicodes.com/wp-content/uploads/2016/05/main.png)
+ * ![mysiseLogin](http://www.yicodes.com/wp-content/uploads/2016/05/main.png)
  * 有错误提示(返回值在login.java中)
- ![mysiseLogin](http://www.yicodes.com/wp-content/uploads/2016/05/学号错误.png)
+ * ![mysiseLogin](http://www.yicodes.com/wp-content/uploads/2016/05/学号错误.png)
 
 #login.java
  获取登录相关参数
