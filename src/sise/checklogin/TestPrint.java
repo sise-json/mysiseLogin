@@ -1,4 +1,4 @@
-package demo;
+package sise.checklogin;
 
 import java.util.Map;
 
@@ -20,9 +20,10 @@ public class TestPrint {
 		System.out.println("\n学生成绩：");
 		System.out.print("获得办公软件成绩：");
 		System.out.println(getcontent.scoreMap.get("办公软件"));
+		System.out.println(getcontent.scoreMap.get("大学体育I"));
 			
 		System.out.println("\n学生课程表：");
-		//其实可以根据数组第一个索引知道判断第几节
+		//其实可以根据数组第一个索引知 道判断第几节
 		System.out.print("星期三第二节课："+ "时间是："+ getcontent.clasStrings[2][0]);
 		System.out.println(" \t" + getcontent.clasStrings[2][3]);
 		System.out.print("星期二第一节课："+ "时间是："+ getcontent.clasStrings[1][0]);

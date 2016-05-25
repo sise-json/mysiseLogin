@@ -1,0 +1,18 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch newbranch
+# Changes to be committed:
+#	new file:   bin/sise/checklogin/Demo.class
+#	new file:   bin/sise/checklogin/TestPrint.class
+#	new file:   bin/sise/checklogin/getcontent.class
+#	new file:   bin/sise/checklogin/getline.class
+#	new file:   bin/sise/checklogin/login.class
+#	deleted:    possible_used_jars/mysql-connector-java-5.1.28-bin.jar
+#	renamed:    src/demo/Demo.java -> src/sise/checklogin/Demo.java
+#	renamed:    src/demo/TestPrint.java -> src/sise/checklogin/TestPrint.java
+#	renamed:    src/demo/getcontent.java -> src/sise/checklogin/getcontent.java
+#	renamed:    src/demo/getline.java -> src/sise/checklogin/getline.java
+#	renamed:    src/demo/login.java -> src/sise/checklogin/login.java
+#
+

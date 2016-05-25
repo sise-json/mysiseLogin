@@ -1,4 +1,4 @@
-package demo;
+package sise.checklogin;
 
 import java.nio.charset.Charset;
 import java.util.HashMap;
@@ -71,6 +71,7 @@ public class login {
 			  *				}
 			*/
 			//使用cookies保存的登录信息进行模拟登录获取信息系统主页
+			
 			Document main_jsp = Jsoup.connect("http://class.sise.com.cn:7001/sise/module/student_states/student_select_class/main.jsp").cookies(cookies).post();
 			main_jsp.charset(Charset.forName("UTF-8"));
 			//System.out.println(main_jsp);

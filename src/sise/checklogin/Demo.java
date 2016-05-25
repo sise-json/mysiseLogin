@@ -1,4 +1,4 @@
-package demo;
+package sise.checklogin;
 
 /**
  *  Class Name: Demo.java
@@ -11,7 +11,7 @@ public class Demo {
 
 	public static void main(String[] args) throws Exception {
 		//一定要先执行这个函数，获得相关信息
-		login.getloginvalue("学号","密码");	
+		login.getloginvalue("请在这里输入你的账号","这里输入你的密码");	
 		
 		//测试打印输出！
 		TestPrint.print();

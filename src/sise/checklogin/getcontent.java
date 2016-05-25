@@ -1,4 +1,4 @@
-package demo;
+package sise.checklogin;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -161,5 +161,10 @@ public class getcontent {
 				e.printStackTrace();
 				return null;
 			}
+		}
+		
+		//这里是做安卓项目预留的接口，具体怎么使用请看jdk
+		public static Map<String,String> getstuinfo(){
+			return infoMap;
 		}
 }
